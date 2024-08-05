@@ -8,9 +8,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # API details
-serverIp = '172.16.1.24'
+serverIp = #twc server ip
 serverPort = '8111'
-authId = "c2FuZGxpbmtfYXBpOlRXQ2FwaTIwMjQ="
+authId = #Rest API Auth ID
 headers = {"accept": "application/ld+json", "authorization": f"Basic {authId}"}
 
 # Get workspaces
@@ -105,7 +105,23 @@ for revision in revisionList:
             ownersId = element_data[1].get('kerml:owner', {}).get('@id', 'Unknown')
             ownersName = elementListData.get(ownersId, {}).get('data', [{}])[1].get('kerml:name', 'Unknown')
             body = element_data[1].get("kerml:esiData", {}).get("body", "")
-            df = df.append({"Version Number": targetRevision, "Element ID": element_id, "Element Name": ownersName, "Documentation": body}, ignore_index=True)
+            #change to concate
+            #df = df.append({"Version Number": targetRevision, "Element ID": element_id, "Element Name": ownersName, "Documentation": body}, ignore_index=True)
 
 # Display the DataFrame with elements from all versions
 print(df)
+
+"""
+Error:
+
+3286e597-8a26-4cbe-af21-54897682582e
+de37b3ee-ad71-4df1-9e88-a3752b257d4d
+7a4b4734-7acb-4556-b64f-4b9c39e1ef5d
+ee05b1cd-47ee-44e5-8285-5f27cbecccd7
+Traceback (most recent call last):
+  File "/home/sandlink/Documents/pullFromSpecificversioninCmaeo.py", line 105, in <module>
+    ownersName = elementListData[ownersId]['data'][1]['kerml:name']
+KeyError: 'ee05b1cd-47ee-44e5-8285-5f27cbecccd7'
+
+
+This ID exists in the element_ids, but the error message shows that 
