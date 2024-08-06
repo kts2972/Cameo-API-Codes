@@ -8,9 +8,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # API details
-serverIp = '172.16.1.24'
+serverIp = #Server IP
 serverPort = '8111'
-authId = "c2FuZGxpbmtfYXBpOlRXQ2FwaTIwMjQ="
+authId = #Auth ID
 headers = {"accept": "application/ld+json", "authorization": f"Basic {authId}"}
 
 # Get workspaces
