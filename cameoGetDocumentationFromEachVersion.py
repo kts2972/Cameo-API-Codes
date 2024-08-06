@@ -143,6 +143,12 @@ print(df)
 
 
 """
+ERROR:
+
+  File "/home/sandlink/Documents/Cameo/RestAPI/Element_Documentation/pullFromSpecificversioninCmaeo.py", line 113, in <module>
+    ownersId = element_data[1].get('kerml:owner', {}).get('@id', 'Unknown')
+AttributeError: 'str' object has no attribute 'get'
+
 
 OUTPUT:
 
@@ -1160,3 +1166,5 @@ Traceback (most recent call last):
   File "/home/sandlink/Documents/Cameo/RestAPI/Element_Documentation/pullFromSpecificversioninCmaeo.py", line 113, in <module>
     ownersId = element_data[1].get('kerml:owner', {}).get('@id', 'Unknown')
 AttributeError: 'str' object has no attribute 'get'
+
+"""
