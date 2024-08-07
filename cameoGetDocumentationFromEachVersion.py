@@ -106,12 +106,10 @@ for revision in revisionList:
     temp_df = pd.DataFrame(columns=["Version Number", "Element ID", "Element Name", "Documentation"])
 
     # Extract data for each element and add to temporary DataFrame
-    for element_id in element_ids:
+      for element_id in element_ids:
         element_data = elementListData.get(element_id, {}).get('data', [{}])
-        #print(element_data)
-        if element_data:
+        if isinstance(element_data, list) and len(element_data) > 1 and isinstance(element_data[1], dict):
             ownersId = element_data[1].get('kerml:owner', {}).get('@id', 'Unknown')
-            print(ownersId)
         
             """ 
             ownersName = elementListData.get(ownersId, {}).get('data', [{}])[1].get('kerml:name', 'null') if ownersId != 'Unknown' else 'null'
