@@ -143,7 +143,7 @@ print(df)
 """
 Issue:
 
-Modified date does not change
+Only pulls the newest revision 
 
 OUTPUT:
 
