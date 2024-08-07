@@ -141,12 +141,9 @@ print(df)
 
 
 """
-ERROR:
+Issue:
 
-  File "/home/sandlink/Documents/Cameo/RestAPI/Element_Documentation/pullFromSpecificversioninCmaeo.py", line 113, in <module>
-    ownersId = element_data[1].get('kerml:owner', {}).get('@id', 'Unknown')
-AttributeError: 'str' object has no attribute 'get'
-
+Modified date does not change
 
 OUTPUT:
 
